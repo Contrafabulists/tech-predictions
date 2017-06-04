@@ -8,7 +8,7 @@ layout: default
 <p><strong>2015</strong></p>
 <ul>
 {% for entry in quotes %}
-  {% if entry.prediction_year == '2015' %}
+  {% if entry.prediction_year == 2015 %}
     <li><a href="{{ entry.url }}">{{ entry.title }}</a>: <em>"{{ entry.quote }}"</em> from {{ entry.post_year }}</li>
   {% endif %}
 {% endfor %}
@@ -17,7 +17,7 @@ layout: default
 <p><strong>2016</strong></p>
 <ul>
 {% for entry in quotes %}
-  {% if entry.prediction_year == '2016' %}
+  {% if entry.prediction_year == 2016 %}
     <li><a href="{{ entry.url }}">{{ entry.title }}</a>: <em>"{{ entry.quote }}"</em> from {{ entry.post_year }}</li>
   {% endif %}
 {% endfor %}
