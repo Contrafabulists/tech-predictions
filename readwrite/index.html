@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<h2>ReadWrite Predictions</h2>
+<p>These are some of the technology predictions made on ReadWrite.</p>
+
+{% assign quotes = site.data.readwrite | sort: 'prediction_year' %}
+
+{% assign years = site.data.years %}
+<p align='center'>
+  {% for year in years %}
+  {% assign any = 0 %}
+  {% assign show_year = year %}
+  {% for entry in quotes %}{% if entry.prediction_year == show_year %}{% assign any = 1 %}{% endif %}{% endfor %}
+    {% if any == 1 %}
+      <a href="#{{ year }}">{{ year }}</a>{% if forloop.last == false %} | {% endif %}
+    {% endif %}
+  {% endfor %}
+</p>
+
+{% for year in years %}
+  {% assign show_year = year %}
+  {% assign any = 0 %}
+  {% for entry in quotes %}{% if entry.prediction_year == show_year %}{% assign any = 1 %}{% endif %}{% endfor %}
+  {% if any == 1 %}
+    <a name="{{ show_year }}"></a>
+    <p><strong>{{ show_year }}</strong></p>
+    <ul>
+    {% for entry in quotes %}
+      {% if entry.prediction_year == show_year %}
+        <li><a href="{{ entry.url }}">{{ entry.title }}</a>: <em>"{{ entry.quote }}"</em>...prediction was made in {{ entry.post_year }}</li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}
