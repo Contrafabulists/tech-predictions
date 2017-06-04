@@ -8,7 +8,10 @@ layout: default
 {% assign years = site.data.years %}
 <p align='center'>
   {% for year in years %}
-    <a href="#{{ year }}">{{ year }}</a>{% if forloop.last == false %} | {% endif %}
+  {% for entry in quotes %}{% if entry.prediction_year == show_year %}{% assign any = 1 %}{% endif %}{% endfor %}
+    {% if any == 1 %}
+      <a href="#{{ year }}">{{ year }}</a>{% if forloop.last == false %} | {% endif %}
+    {% endif %}
   {% endfor %}
 </p>
 
