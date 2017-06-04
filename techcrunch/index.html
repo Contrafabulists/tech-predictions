@@ -10,6 +10,7 @@ layout: default
 {% assign years = site.data.years %}
 <p align='center'>
   {% for year in years %}
+  {% assign any = 0 %}
   {% assign show_year = year %}
   {% for entry in quotes %}{% if entry.prediction_year == show_year %}{% assign any = 1 %}{% endif %}{% endfor %}
     {% if any == 1 %}
