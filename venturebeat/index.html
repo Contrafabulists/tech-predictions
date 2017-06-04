@@ -4,9 +4,7 @@ layout: default
 
 <h2>VentureBeat Predictions</h2>
 <p>These are some of the technology predictions made on VentureBeat.</p>
-
 {% assign quotes = site.data.venturebeat | sort: 'prediction_year' %}
-
 {% assign years = site.data.years %}
 <p align='center'>
   {% for year in years %}
