@@ -5,6 +5,8 @@ layout: default
 <h2>Techcrunch</h2>
 <p>These are some of the technology predictions made on Techcrunch.</p>
 
+{% assign quotes = site.data.techcrunch | sort: 'prediction_year' %}
+
 {% assign years = site.data.years %}
 <p align='center'>
   {% for year in years %}
@@ -16,7 +18,6 @@ layout: default
   {% endfor %}
 </p>
 
-{% assign quotes = site.data.techcrunch | sort: 'prediction_year' %}
 {% for year in years %}
   {% assign show_year = year %}
   {% assign any = 0 %}
