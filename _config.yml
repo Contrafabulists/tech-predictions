@@ -9,21 +9,21 @@ description: > # this means to ignore newlines until "email:"
 
 email: info@contrafabulists.com
 #blog logo
-logo: "/assets/images/cog.jpg"
-logo2: "/assets/images/cog_tr.png"
+logo: "/tech-predictions/assets/images/cog.jpg"
+logo2: "/tech-predictions/assets/images/cog_tr.png"
 # blog cover
-cover: "/assets/images/owl.jpg"
+cover: "/tech-predictions/assets/images/owl.jpg"
 covercredits: "http://bryanmmathers.com"
 
 name: 'Contrafabulists'
 author: 'Audrey Watters'
-author_image: "/assets/images/author_aw.jpg"
+author_image: "/tech-predictions/assets/images/author_aw.jpg"
 author2: 'Kin Lane'
-author_image2: "/assets/images/author_kl.jpg"
+author_image2: "/tech-predictions/assets/images/author_kl.jpg"
 
 paginate:	5
 paginate_path: "/blog/page:num"
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /:categories/:year/:month/:day/:title
 
 url: "http://contrafabulists.com" # the base hostname & protocol for your site
 baseurl: ""
@@ -40,7 +40,7 @@ social:
     share_link: "&url="
 
   - icon:   facebook
-    url: https://facebook.com/contrafabulists  
+    url: https://facebook.com/contrafabulists
     desc: Like me on facebook
     share_url: http://www.facebook.com/sharer/sharer.php
     share_title: ?title=
@@ -49,13 +49,13 @@ social:
   - icon:   github
     url:    https://github.com/Contrafabulists/website
     desc:   Fork me on github
-    share_url: 
+    share_url:
     share_title:
     share_link:
 
  # - icon:  google-plus
- #   url:   
- #   desc:  
+ #   url:
+ #   desc:
  #   share_url:
  #   share_title:
  #   share_link:
@@ -72,6 +72,4 @@ social:
     desc: Email
     share_url:
     share_title:
-    share_link:    
-  
-
+    share_link:
