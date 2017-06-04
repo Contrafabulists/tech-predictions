@@ -8,7 +8,7 @@ layout: default
 {% assign years = site.data.years %}
 <p align='center'>
   {% for year in years %}
-    <a href="#{{ year }}">{{ year }}</a> |
+    <a href="#{{ year }}">{{ year }}</a>{% if forloop.last == true %} | {% endif %}
   {% endfor %}
 </p>
 
