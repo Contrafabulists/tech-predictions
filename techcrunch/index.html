@@ -4,24 +4,14 @@ layout: default
 
 <h2>Techcrunch</h2>
 <p>These are some of the technology predictions made on Techcrunch.</p>
+
+{% assign years = site.data.years %}
 <p align='center'>
-  <a href="#2015">2015</a> |
-  <a href="#2015">2016</a> |
-  <a href="#2015">2017</a> |
-  <a href="#2015">2018</a> |
-  <a href="#2015">2019</a> |
-  <a href="#2015">2020</a> |
-  <a href="#2015">2021</a> |
-  <a href="#2015">2022</a> |
-  <a href="#2015">2023</a> |
-  <a href="#2015">2024</a> |
-  <a href="#2015">2025</a> |
-  <a href="#2015">2026</a> |
-  <a href="#2015">2027</a> |
-  <a href="#2015">2028</a> |
-  <a href="#2015">2029</a> |
-  <a href="#2015">2030</a>
+  {% for year in years %}
+    <a href="#{{ year }}">{{ year }}</a> |
+  {% endfor %}
 </p>
+
 {% assign quotes = site.data.techcrunch | sort: 'prediction_year' %}
 {% assign show_year = 2015 %}
 {% assign any = 0 %}
