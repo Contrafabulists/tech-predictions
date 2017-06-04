@@ -218,3 +218,48 @@ layout: default
   {% endfor %}
   </ul>
 {% endif %}
+
+{% assign show_year = 2028 %}
+{% assign any = 0 %}
+{% for entry in quotes %}{% if entry.prediction_year == show_year %}{% assign any = 1 %}{% endif %}{% endfor %}
+{% if any == 1 %}
+  <a name="{{ show_year }}"></a>
+  <p><strong>{{ show_year }}</strong></p>
+  <ul>
+  {% for entry in quotes %}
+    {% if entry.prediction_year == show_year %}
+      <li><a href="{{ entry.url }}">{{ entry.title }}</a>: <em>"{{ entry.quote }}"</em>...prediction was made in {{ entry.post_year }}</li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+{% endif %}
+
+{% assign show_year = 2029 %}
+{% assign any = 0 %}
+{% for entry in quotes %}{% if entry.prediction_year == show_year %}{% assign any = 1 %}{% endif %}{% endfor %}
+{% if any == 1 %}
+  <a name="{{ show_year }}"></a>
+  <p><strong>{{ show_year }}</strong></p>
+  <ul>
+  {% for entry in quotes %}
+    {% if entry.prediction_year == show_year %}
+      <li><a href="{{ entry.url }}">{{ entry.title }}</a>: <em>"{{ entry.quote }}"</em>...prediction was made in {{ entry.post_year }}</li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+{% endif %}
+
+{% assign show_year = 2030 %}
+{% assign any = 0 %}
+{% for entry in quotes %}{% if entry.prediction_year == show_year %}{% assign any = 1 %}{% endif %}{% endfor %}
+{% if any == 1 %}
+  <a name="{{ show_year }}"></a>
+  <p><strong>{{ show_year }}</strong></p>
+  <ul>
+  {% for entry in quotes %}
+    {% if entry.prediction_year == show_year %}
+      <li><a href="{{ entry.url }}">{{ entry.title }}</a>: <em>"{{ entry.quote }}"</em>...prediction was made in {{ entry.post_year }}</li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+{% endif %}
